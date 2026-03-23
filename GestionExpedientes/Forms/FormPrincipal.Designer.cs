@@ -53,9 +53,9 @@ namespace GestionExpedientes.Forms
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(75, 177);
+            this.btnBuscar.Location = new System.Drawing.Point(75, 174);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(140, 60);
+            this.btnBuscar.Size = new System.Drawing.Size(140, 69);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "2. Buscar estudiante por carnet";
             this.btnBuscar.UseVisualStyleBackColor = false;
