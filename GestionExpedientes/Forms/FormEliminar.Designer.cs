@@ -28,10 +28,10 @@ namespace GestionExpedientes.Forms
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(161, 50);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(193, 44);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(165, 22);
+            this.lblTitulo.Size = new System.Drawing.Size(174, 23);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Eliminar Estudiante";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -40,7 +40,7 @@ namespace GestionExpedientes.Forms
             // 
             this.lblCarnet.AutoSize = true;
             this.lblCarnet.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarnet.Location = new System.Drawing.Point(91, 117);
+            this.lblCarnet.Location = new System.Drawing.Point(126, 112);
             this.lblCarnet.Name = "lblCarnet";
             this.lblCarnet.Size = new System.Drawing.Size(125, 19);
             this.lblCarnet.TabIndex = 1;
@@ -48,36 +48,42 @@ namespace GestionExpedientes.Forms
             // 
             // txtCarnet
             // 
-            this.txtCarnet.Location = new System.Drawing.Point(246, 117);
+            this.txtCarnet.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtCarnet.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCarnet.Location = new System.Drawing.Point(281, 112);
             this.txtCarnet.MaxLength = 10;
             this.txtCarnet.Name = "txtCarnet";
-            this.txtCarnet.Size = new System.Drawing.Size(138, 22);
+            this.txtCarnet.Size = new System.Drawing.Size(138, 24);
             this.txtCarnet.TabIndex = 2;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(83, 204);
+            this.btnEliminar.BackColor = System.Drawing.Color.Lavender;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(118, 199);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(133, 39);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(251, 204);
+            this.btnVolver.BackColor = System.Drawing.Color.Lavender;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(286, 199);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(133, 39);
             this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(224, 309);
+            this.lblMensaje.Location = new System.Drawing.Point(259, 292);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(17, 16);
             this.lblMensaje.TabIndex = 5;
@@ -87,7 +93,8 @@ namespace GestionExpedientes.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 369);
+            this.BackColor = System.Drawing.Color.LightYellow;
+            this.ClientSize = new System.Drawing.Size(563, 363);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEliminar);

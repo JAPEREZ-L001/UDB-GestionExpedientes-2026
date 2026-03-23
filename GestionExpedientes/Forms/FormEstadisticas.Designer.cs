@@ -31,10 +31,10 @@ namespace GestionExpedientes.Forms
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(239, 50);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(181, 22);
+            this.lblTitulo.Size = new System.Drawing.Size(191, 23);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Estadísticas del Árbol";
             // 
@@ -91,6 +91,7 @@ namespace GestionExpedientes.Forms
             // dgvCarreras
             // 
             this.dgvCarreras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCarreras.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvCarreras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarreras.Location = new System.Drawing.Point(70, 276);
             this.dgvCarreras.Name = "dgvCarreras";
@@ -102,18 +103,21 @@ namespace GestionExpedientes.Forms
             // 
             // btnVolver
             // 
+            this.btnVolver.BackColor = System.Drawing.Color.Lavender;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(501, 425);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(133, 50);
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FormEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightYellow;
             this.ClientSize = new System.Drawing.Size(683, 502);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgvCarreras);
