@@ -1,6 +1,8 @@
-using System;
-using System.Windows.Forms;
+using GestionExpedientes.Models;
 using GestionExpedientes.Services;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace GestionExpedientes.Forms
 {
@@ -12,6 +14,40 @@ namespace GestionExpedientes.Forms
         {
             InitializeComponent();
             _arbol = arbol;
+            dgvEstudiantes.Columns.Add("Carnet", "Carnet");
+            dgvEstudiantes.Columns.Add("Carrera", "Carrera");
+            dgvEstudiantes.Columns.Add("Promedio", "Promedio");
+            dgvEstudiantes.Columns.Add("Creditos", "Créditos");
         }
+
+        private void FormListado_Load(object sender, EventArgs e)
+        {
+            CargarListado();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarListado();
+        }
+        private void CargarListado()
+        {
+            List<Estudiante> lista = _arbol.ListarInOrden();
+            dgvEstudiantes.Rows.Clear();
+
+            if (lista.Count == 0)
+            {
+                return;
+            }
+            foreach (var est in lista)
+            {
+                dgvEstudiantes.Rows.Add(est.Carnet, est.Carrera, est.Promedio.ToString("F2"), est.Creditos);
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
     }
 }
