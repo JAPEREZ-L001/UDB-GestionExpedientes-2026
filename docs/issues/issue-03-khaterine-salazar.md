@@ -311,3 +311,13 @@ private Estudiante BuscarMock(int carnet)
 - Qué se generó o apoyó con IA: [descripción breve]
 - Revisión humana aplicada: [Sí/No + comentario]
 ```
+
+---
+
+## Nota Informativa de Coordinación (2026-03-26)
+
+Esta asignación se mantiene sin cambios de alcance. Se agrega únicamente contexto de integración:
+
+- El backend base (`ArbolEstudiantes`) está activo en `develop` y `FormPrincipal` ya abre `FormRegistro` y `FormBusqueda` con la misma instancia compartida de árbol.
+- La integración de estadísticas (`FormEstadisticas` + `ReportesService`) avanzó en paralelo, pero no modifica los criterios funcionales de este issue.
+- Puedes continuar con normalidad en `feature/frontend-registro-busqueda` sin depender de cambios adicionales en `FormListado` o `FormEstadisticas`.

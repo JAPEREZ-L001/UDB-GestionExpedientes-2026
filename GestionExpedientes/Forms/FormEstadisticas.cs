@@ -31,7 +31,9 @@ namespace GestionExpedientes.Forms
             lblAlturaValor.Text = _arbol.AlturaArbol().ToString();
 
             dgvCarreras.Rows.Clear();
-            Dictionary<string, int> stats = EstadisticasMock(); //Mock
+            Dictionary<string, int> stats = _reportes.EstadisticasPorCarrera();
+            // Dictionary<string, int> stats = EstadisticasMock();
+
             foreach (var kvp in stats)
             {
                 dgvCarreras.Rows.Add(kvp.Key, kvp.Value);
@@ -43,14 +45,14 @@ namespace GestionExpedientes.Forms
             this.Close();
         }
 
-        private Dictionary<string, int> EstadisticasMock()
-        {
-            return new Dictionary<string, int>
-    {
-        { "ISC", 3 },
-        { "IMA", 2 },
-        { "IME", 1 }
-    };
-        }
+        // private Dictionary<string, int> EstadisticasMock()
+        // {
+        //     return new Dictionary<string, int>
+        //     {
+        //         { "ISC", 3 },
+        //         { "IMA", 2 },
+        //         { "IME", 1 }
+        //     };
+        // }
     }
 }

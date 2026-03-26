@@ -31,7 +31,8 @@ namespace GestionExpedientes.Forms
         }
         private void CargarListado()
         {
-            List<Estudiante> lista = ListarMock();
+            List<Estudiante> lista = _arbol.ListarInOrden();
+            // List<Estudiante> lista = ListarMock();
             dgvEstudiantes.Rows.Clear();
 
             if (lista.Count == 0)
@@ -49,15 +50,14 @@ namespace GestionExpedientes.Forms
             this.Close();
         }
 
-        private List<Estudiante> ListarMock()
-        {
-            return new List<Estudiante>
-    {
-        new Estudiante { Carnet = 2023001, Carrera = "ISC", Promedio = 8.5, Creditos = 120 },
-        new Estudiante { Carnet = 2023002, Carrera = "IMA", Promedio = 7.0, Creditos = 90 },
-        new Estudiante { Carnet = 2023003, Carrera = "ISC", Promedio = 9.1, Creditos = 140 },
-        new Estudiante { Carnet = 2023004, Carrera = "IMA", Promedio = 10, Creditos = 155 },
-            };
-        }
+        // private List<Estudiante> ListarMock()
+        // {
+        //     return new List<Estudiante>
+        //     {
+        //         new Estudiante { Carnet = 2023001, Carrera = "ISC", Promedio = 8.5, Creditos = 120 },
+        //         new Estudiante { Carnet = 2023002, Carrera = "IMA", Promedio = 7.0, Creditos = 90 },
+        //         new Estudiante { Carnet = 2023003, Carrera = "ISC", Promedio = 9.1, Creditos = 140 }
+        //     };
+        // }
     }
 }

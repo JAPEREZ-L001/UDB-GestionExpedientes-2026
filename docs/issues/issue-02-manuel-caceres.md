@@ -183,3 +183,34 @@ Dictionary<string, int> stats = _reportes.EstadisticasPorCarrera();
 - Qué se generó o apoyó con IA: [descripción breve]
 - Revisión humana aplicada: [Sí/No + comentario]
 ```
+
+---
+
+## Actualización de Coordinación (2026-03-26)
+
+Se agrega esta actualización para alinear el trabajo de backend-reportes con los cambios recientes integrados en `develop`:
+
+- `FormEstadisticas` ya se encuentra integrado con `ReportesService` para consumir `EstadisticasPorCarrera()` en la carga de la tabla por carrera.
+- El método `EstadisticasPorCarrera()` ya existe en `Services/ReportesService.cs` y está siendo utilizado por frontend.
+- Para cierre completo del issue, mantener como pendiente explícito `ResumenArbol()` con el formato definido: `"Total: X estudiantes | Altura: Y"`.
+
+### Implicación para la rama `feature/backend-reportes`
+
+- Continuar el desarrollo sobre la versión actual de `develop`.
+- Evitar romper el contrato consumido por frontend:
+  - `Dictionary<string, int> EstadisticasPorCarrera()`
+- Completar y validar `ResumenArbol()` como parte del entregable final del issue.
+
+### Estado verificado en código (2026-03-26)
+
+Verificación directa en `GestionExpedientes/Services/ReportesService.cs`:
+
+- `EstadisticasPorCarrera()` está implementado.
+- La implementación actual:
+  - consume `_arbol.ListarInOrden()`,
+  - agrupa por `Carrera`,
+  - y retorna `Dictionary<string, int>` (case-insensitive con `StringComparer.OrdinalIgnoreCase`).
+
+Pendiente funcional para completar el issue:
+
+- Implementar `ResumenArbol()` según criterio: `"Total: X estudiantes | Altura: Y"`.

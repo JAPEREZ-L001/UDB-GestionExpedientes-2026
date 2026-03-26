@@ -14,7 +14,7 @@ Dejar el repositorio **listo para que todo el equipo trabaje en paralelo**: estr
 
 ## Qué hice
 
-- Creé el repo **`UDB-GestionExpedientes-2026`** y lo dejé público.
+- Creé el repo `**UDB-GestionExpedientes-2026`** y lo dejé público.
 - Subí la estructura completa de Visual Studio (sin carpeta `src/`).
 - Implementé:
   - `Models/Estudiante.cs`
@@ -80,4 +80,35 @@ Ninguno por ahora.
 
 - PowerShell: para commits con cuerpo multi-línea usar **varios `-m`** (ej: `git commit -m "título" -m "" -m "detalle"`), porque heredocs no funcionan igual que en bash.
 - El stub de `ReportesService.cs` existe para evitar conflictos: Manuel lo puede ampliar en su rama sin tocar el AVL.
+
+---
+
+## Actualización posterior (2026-03-26)
+
+Se aplicaron correcciones en `develop` para alinear la implementación frontend con los criterios funcionales del issue de Fernanda:
+
+- `GestionExpedientes/Forms/FormListado.cs`
+  - `CargarListado()` ahora consume `_arbol.ListarInOrden()` en lugar de datos mock.
+  - Se comento `ListarMock()`.
+- `GestionExpedientes/Forms/FormEstadisticas.cs`
+  - `CargarEstadisticas()` ahora consume `_reportes.EstadisticasPorCarrera()` en lugar de `EstadisticasMock()`.
+  - Se comento`EstadisticasMock()`.
+
+Impacto:
+
+- `FormListado` refleja el estado real del árbol (incluye escenario de árbol vacío sin excepción).
+- `FormEstadisticas` refleja datos reales de reportes por carrera.
+
+---
+
+## Actualización de coordinación de issues (2026-03-26)
+
+Con base en esta actualización posterior, se agregaron notas de coordinación en los issues activos:
+
+- `docs/issues/issue-02-manuel-caceres.md`
+  - Se documentó que `FormEstadisticas` ya consume `ReportesService.EstadisticasPorCarrera()` en `develop`.
+  - Se dejó explícito como pendiente de cierre de issue la implementación/validación de `ResumenArbol()`.
+- `docs/issues/issue-03-khaterine-salazar.md`
+  - Se agregó una nota informativa confirmando que su alcance no cambia.
+  - Se indicó que puede continuar sin bloqueos en `feature/frontend-registro-busqueda`.
 
