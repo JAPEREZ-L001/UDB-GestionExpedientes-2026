@@ -60,7 +60,7 @@ namespace GestionExpedientes.Forms
                     Promedio = promedio,
                     Creditos = creditos
                 };
-                _arbol.Insertar(est);
+                _arbol.Insertar(est); 
                 lblMensaje.ForeColor = Color.Green;
                 lblMensaje.Text = "Estudiante registrado correctamente.";
                 LimpiarCampos();
@@ -71,7 +71,9 @@ namespace GestionExpedientes.Forms
                 lblMensaje.Text = ex.Message;
             }
 
+           
         }
+
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {

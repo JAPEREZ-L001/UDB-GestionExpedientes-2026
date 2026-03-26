@@ -112,3 +112,4 @@ Con base en esta actualización posterior, se agregaron notas de coordinación e
   - Se agregó una nota informativa confirmando que su alcance no cambia.
   - Se indicó que puede continuar sin bloqueos en `feature/frontend-registro-busqueda`.
 
+
