@@ -1,0 +1,36 @@
+# Notas — frontend-registro-busqueda (Katherinne)
+**Fecha:** 2026-03-26  
+**Feature:** FormRegistro + FormBusqueda  
+**Responsable:** Katherinne Salazar
+
+---
+## Objetivo del día
+Implementar la interfaz de usuario para el registro y búsqueda de estudiantes, incluyendo validaciones de datos y conexión con el modelo `ArbolEstudiantes`.
+
+---
+## Qué hice
+- **Diseño Visual:** Implementé `FormRegistro` y `FormBusqueda` siguiendo la línea gráfica de Fernanda (Fuente: Microsoft Tai Le, Colores: Lavender/White).
+- **Validaciones Front:**
+  - Carnet: No vacío y numérico positivo.
+  - Promedio: Rango entre 0.0 y 10.0.
+  - Carrera: Selección obligatoria en ComboBox.
+- **Integración:** Sincronicé mi rama con los cambios de Fernanda en `FormPrincipal` mediante `git merge develop`.
+- **Pruebas:** Verifiqué el flujo de datos usando Mocks antes de conectar con el AVL real.
+
+---
+## Verificación rápida (evidencia)
+- **Formularios:** `FormRegistro.cs` y `FormBusqueda.cs` completados y funcionales.
+- **Conexión:** Los eventos `btnRegistrar_Click` y `btnBuscar_Click` llaman correctamente a `_arbol.Insertar()` y `_arbol.Buscar()`.
+---
+## Comandos clave usados
+```bash
+# Sincronizar con el equipo
+git checkout develop
+git pull origin develop
+git checkout feature/frontend-registro-busqueda
+git merge develop
+
+# Guardar y subir
+git add .
+git commit -m "feat: implementar validaciones y diseño final de registro/busqueda"
+git push origin feature/frontend-registro-busqueda
