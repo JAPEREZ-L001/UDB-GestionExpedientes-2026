@@ -1,11 +1,23 @@
 // =============================================
 // EXAMEN DE LABORATORIO - ESTRUCTURAS DE DATOS
 // =============================================
-// Título: Sistema de Gestión de Expedientes
+// Curso: Programación con Estructuras de Datos — PED104 — G01L
+// Integrantes:
+//   - Josué Adonaí Pérez López — PL250205
+//   - Manuel Enrique Cáceres Mejía — CM250371
+//   - Katherinne Ayleen Salazar Guerra — SG250348
+//   - Fernanda Guadalupe Hernández Galdámez — HG251382
+// Fecha de entrega: 24 de marzo de 2026
+// Tipo de Árbol Implementado: AVL
+// ---------------------------------------------
+// Título: Sistema de Gestión de Expedientes Académicos
 // Tipo de Árbol: AVL
-// Justificación: Mantiene balance O(log n) con inserciones consecutivas
-// Declaración IA: Asistencia de IA (p. ej. Cursor/Copilot) para borrador y revisión
-// de código C#; rotaciones AVL y casos de eliminación validados manualmente por el equipo.
+// Justificación: Los carnets consecutivos dejan un ABB degenerado en O(n);
+// el AVL mantiene altura O(log n) con rotaciones automáticas (RSI, RSD, RDI, RDD).
+// Declaración uso de IA: GitHub Copilot ayudó exclusivamente a elaborar la planificación del trabajo
+// y los templates/archivos guía dentro de docs/ (p. ej. plantillas, tutoriales, issues de referencia).
+// El código de la aplicación (incl. árbol AVL y formularios) fue desarrollado y revisado por el equipo
+// sin asistencia de IA.
 // =============================================
 
 using System;
@@ -17,6 +29,45 @@ namespace GestionExpedientes.Services
     public class ArbolEstudiantes
     {
         private NodoArbol _raiz;
+
+        /// <summary>
+        /// Acceso solo para visualización educativa del árbol (factor de balance, dibujo).
+        /// </summary>
+        public NodoArbol ObtenerRaiz()
+        {
+            return _raiz;
+        }
+
+        /// <summary>
+        /// FB = altura(izq) − altura(der), según guía AVL del desafío.
+        /// </summary>
+        public int ObtenerFactorBalance(NodoArbol nodo)
+        {
+            return FactorBalance(nodo);
+        }
+
+        /// <summary>
+        /// Conteo de estudiantes agrupados por carrera (requisito sección 3.3 del desafío).
+        /// </summary>
+        public Dictionary<string, int> EstadisticasPorCarrera()
+        {
+            var estudiantes = ListarInOrden();
+            var stats = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (var estudiante in estudiantes)
+            {
+                var carrera = string.IsNullOrWhiteSpace(estudiante.Carrera)
+                    ? "SIN_CARRERA"
+                    : estudiante.Carrera.Trim();
+
+                if (!stats.ContainsKey(carrera))
+                    stats[carrera] = 0;
+
+                stats[carrera]++;
+            }
+
+            return stats;
+        }
 
         public void Insertar(Estudiante est)
         {

@@ -2,8 +2,9 @@
 
 **Proyecto:** Sistema de Gestión de Expedientes Académicos — UDB
 **Repositorio:** `UDB-GestionExpedientes-2026`
-**Líder:** Josué López
-**Equipo:** Josué López · Manuel Cáceres · Khaterine Salazar · Fernanda Galdámez
+**Curso:** Programación con Estructuras de Datos — **PED104 — G01L**
+**Líder:** Josué Adonaí Pérez López (PL250205)
+**Equipo:** Manuel Enrique Cáceres Mejía (CM250371) · Katherinne Ayleen Salazar Guerra (SG250348) · Fernanda Guadalupe Hernández Galdámez (HG251382)
 **Stack:** C# · .NET Framework 4.7.2 · WinForms · Git · GitHub
 **Fecha de entrega:** 24 de marzo de 2026
 
@@ -13,12 +14,12 @@
 
 **Paso 1 — Lee tu issue.** Tiene todo lo que necesitas hacer: controles, métodos, código de ejemplo y criterios de aceptación.
 
-| Miembro           | Tu issue                                                          |
-|-------------------|-------------------------------------------------------------------|
-| Josué López       | [`issues/issue-01-josue-lopez.md`](../issues/issue-01-josue-lopez.md)           |
-| Manuel Cáceres    | [`issues/issue-02-manuel-caceres.md`](../issues/issue-02-manuel-caceres.md)     |
-| Khaterine Salazar | [`issues/issue-03-khaterine-salazar.md`](../issues/issue-03-khaterine-salazar.md)|
-| Fernanda Galdámez | [`issues/issue-04-fernanda-galdamez.md`](../issues/issue-04-fernanda-galdamez.md)|
+| Miembro | Carnet | Tu issue |
+|---------|--------|----------|
+| Josué Adonaí Pérez López | PL250205 | [`issues/issue-01-josue-lopez.md`](../issues/issue-01-josue-lopez.md) |
+| Manuel Enrique Cáceres Mejía | CM250371 | [`issues/issue-02-manuel-caceres.md`](../issues/issue-02-manuel-caceres.md) |
+| Katherinne Ayleen Salazar Guerra | SG250348 | [`issues/issue-03-khaterine-salazar.md`](../issues/issue-03-khaterine-salazar.md) |
+| Fernanda Guadalupe Hernández Galdámez | HG251382 | [`issues/issue-04-fernanda-galdamez.md`](../issues/issue-04-fernanda-galdamez.md) |
 
 **Paso 2 — Configura Git y clona el repo.** Si es tu primera vez: [`tutorials/01-git-desde-cero.md`](../tutorials/01-git-desde-cero.md)
 

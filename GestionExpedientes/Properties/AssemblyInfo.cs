@@ -2,7 +2,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("GestionExpedientes")]
-[assembly: AssemblyDescription("Sistema de Gestión de Expedientes Académicos — UDB")]
+[assembly: AssemblyDescription("PED104 G01L — Sistema de Gestión de Expedientes Académicos — UDB")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("UDB")]
 [assembly: AssemblyProduct("GestionExpedientes")]

@@ -45,6 +45,18 @@ namespace GestionExpedientes.Forms
             new FormEstadisticas(_arbol, _reportes).ShowDialog();
         }
 
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            using (var f = new FormVisualizarArbol(_arbol))
+                f.ShowDialog();
+        }
+
+        private void btnComparar_Click(object sender, EventArgs e)
+        {
+            using (var f = new FormCompararRendimiento())
+                f.ShowDialog();
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
